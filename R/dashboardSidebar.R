@@ -60,8 +60,7 @@
 #' )
 #' }
 #' @export
-dashboardSidebar <- function(..., disable = FALSE, width = NULL, collapsed = FALSE#, id = "main-sidebar"
-  ) {
+dashboardSidebar <- function(..., disable = FALSE, width = NULL, collapsed = FALSE) {
   width <- validateCssUnit(width)
 
   # Set up custom CSS for custom width
@@ -124,14 +123,12 @@ dashboardSidebar <- function(..., disable = FALSE, width = NULL, collapsed = FAL
   # just passed through (as the `data-value` attribute) to the
   # `dashboardPage()` function
   tags$aside(
-    #id = id,
     class = paste("main-sidebar"),
     `data-value` = dataValue,
     custom_css,
     tags$section(
       class = "sidebar",
       `data-disable` = if (disable) 1 else NULL,
-      # `data-expanded` = dataExpanded,
       list(...)
     )
   )
@@ -440,7 +437,6 @@ menuSubItem <- function(text, tabName = NULL, href = NULL, newtab = TRUE,
     if (newtab)
       target <- "_blank"
   }
-
 
   tags$li(
     a(href = href,
