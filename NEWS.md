@@ -1,6 +1,8 @@
 shinydashboard 0.5.3.9000
 =========================
 
+Fixed [#71](https://github.com/rstudio/shinydashboard/issues/71) and [#87](https://github.com/rstudio/shinydashboard/issues/87): detect and enforce selected tab for dynamic sidebars. ([#189](https://github.com/rstudio/shinydashboard/pull/189))
+
 * Divided JS code into chunks.
 
 * Fixed [#129](https://github.com/rstudio/shinydashboard/issues/129): Trigger shown/hidden event for Shiny outputs in the sidebar. ([#194](https://github.com/rstudio/shinydashboard/pull/194))
